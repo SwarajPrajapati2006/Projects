@@ -1,0 +1,722 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+html body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    height: 20vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.7rem;
+    color: white;
+     position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    animation: slideDown 1.2s ease-out forwards;
+   
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.icons img {
+    height: 8vh;
+}
+
+.icons a:hover {
+    color: rgb(121, 123, 121);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+        font-family:  Arial, Helvetica, sans-serif;
+
+}
+
+.icons button {
+    padding: 10px 14px;
+    background: none;
+    border: 0.5px solid white;
+
+}
+
+.icons button:hover {
+    background-color: rgb(179, 178, 178);
+}
+
+.page1 {
+    background: linear-gradient(to bottom, #000000, #444444, #888888);
+
+    height: 100vh;
+}
+
+.image {
+    width: 100%;
+    margin: auto;
+    /* border: none; */
+    object-fit: contain;
+    margin-top: 8rem;
+}
+
+.image video {
+    width: 100%;
+    height: 80vh;
+    
+    top: 0;
+     left: 0;
+  
+    object-fit: cover;
+    opacity: 0;
+  animation: videoFadeIn 1.2s ease 2s forwards; /* fade in slowly after 2s */
+  z-index: -1;
+}
+
+@keyframes videoFadeIn {
+  to { opacity: 1; }} 
+
+
+
+.page2 {
+    background-color: white;
+    height: 100vh;
+    width: 75%;
+    margin: auto;
+}
+
+.btn{
+    display:flex 
+    ;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+p{font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 3rem;
+    color: rgb(114, 113, 113);
+
+}
+
+.btn button{
+    padding: 10px 19px;
+    margin-top: 2rem;
+}
+
+#btn1 {
+    background: none;
+    color:black;
+    background-color:#394D45;
+    border: none;
+    border: 2px;
+    
+}
+
+#btn1 a{
+    color:white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#btn2{
+    background: none;
+    color:black;
+   
+    
+   border: 0.5px solid grey;
+    
+    
+}
+
+#btn2:hover
+{
+    background-color: #bbc0be;
+}
+
+#btn1:hover{
+    background-color: #5f8073;
+}
+#btn2 a{
+ color:rgb(31, 12, 12);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+}
+
+
+.content{
+    display: flex;
+    gap: 2rem;
+    margin: auto;
+    width: 95%;
+
+}
+
+.contentPart1{
+    background-image: url(./imges/bentley_mulliner_batur_2023_light_grey_car_4k_5k_hd_cars.jpg);
+    height: 80vh;
+    width: 100%;
+    background-color: #394D45;
+     background-size: cover;      /* scales to fill container */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+  /* prevents tiling */
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;               /* start hidden */
+  transform: translateY(30px);  /* start slightly lower */
+  /* apply the animation */
+  animation: fadeSlideIn 1s ease-out forwards;
+  /* optional delay if you want it to wait a bit */
+  animation-delay: 0.3s;
+}
+.bottom div{
+    display: flex;
+    justify-content: center;  /* horizontally center text */
+  align-items: flex-end; 
+  
+    color: white;
+ 
+}
+
+.contentPart2{
+     background-image: url(./imges/bentley-continental-gt-2018-4k-1g.jpg);
+    height: 80vh;
+    width: 100%;
+    background-color: #394D45;
+     background-size: cover;      /* scales to fill container */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+  /* prevents tiling */
+  position: fixed;
+   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;               /* start hidden */
+  transform: translateY(30px);  /* start slightly lower */
+  /* apply the animation */
+  animation: fadeSlideIn 1s ease-out forwards;
+  /* optional delay if you want it to wait a bit */
+  animation-delay: 0.3s;
+}
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.contentPart3{
+     background-image: url(./imges/2020\ Bentley\ Bentayga\ green.jpg);
+    height: 80vh;
+      width: 100%;
+    background-color: #394D45;
+     background-size: cover;      /* scales to fill container */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;/* prevents tiling */
+ box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;               /* start hidden */
+  transform: translateY(30px);  /* start slightly lower */
+  /* apply the animation */
+  animation: fadeSlideIn 1s ease-out forwards;
+  /* optional delay if you want it to wait a bit */
+  animation-delay: 0.3s;
+
+}
+
+
+.bigimage{
+    height:100vh ;
+    width: 90%;
+    margin: auto;
+
+    background-image: url(./imges/bentley_mulliner_batur_2023_light_grey_car_4k_5k_hd_cars.jpg);
+    background-size: cover;      /* scales to fill container */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+
+}
+
+.page3{
+    margin-top: 4rem;
+}
+
+.container{
+    height: 36vh;
+    width: 35vw;
+    background: linear-gradient(to right,#38100F,#83919A);
+       /* background: linear-gradient(to bottom,#4F130B,#757276); */
+ align-items:last baseline;
+    /* backdrop-filter: transparent; */
+    opacity: 0.9;
+    display: flex;
+   margin-left: 6rem;
+   margin-top: 6rem;
+}
+
+.btn4 a{
+    
+    color: rgb(247, 245, 245);
+
+}
+
+.btn4 {
+    background-color: #394D45;
+    margin-top: 1rem;
+     padding: 8px 17px;
+    border: none;
+}
+
+.btn4:hover{
+    background-color: #658d7d;
+    color: black;
+}
+
+.para{
+    color: white;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    width: 90%;
+    
+    margin: auto;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.para p{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+
+
+.bigimage1{
+    height:100vh ;
+    width: 90%;
+    margin: auto;
+
+    background-image: url(./imges/Configure\ your\ perfect\ car\ Main.jpg);
+    background-size: 100%;      /* scales to fill container */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.container2{
+    height: 40vh;
+    width: 35vw;
+    background: linear-gradient(to right,#BC9554,#1D150C);
+       /* background: linear-gradient(to bottom,#4F130B,#757276); */
+ /* align-items:last baseline; */
+
+
+
+    /* backdrop-filter: transparent; */
+   
+    display: flex;
+   
+   margin-top: 2rem;
+}
+
+.para1{
+    color: white;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    width: 90%;
+    margin: auto;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    
+}
+
+.para1 p{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.para1 h6{
+    font-weight: lighter;
+}
+
+
+.para1 h2{
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.buttonid{
+    padding: 8px 10px;
+    background-color:#394D45 ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: lighter;
+    border: none;
+    color: white;
+    pointer-events: visible;
+    border-radius: 2px ;
+    margin-top: 2rem;
+}
+
+.buttonid:hover{
+    background-color: #556f64;
+}
+
+.page4{
+    margin-top: 3rem;
+    display: flex;
+   
+    width: 90%;
+    margin: auto;
+}
+
+
+.page4 .about img{
+    width: 80%;
+    
+}
+.page4 .about{
+    object-fit: fill;
+}
+
+.p2{
+    font-size: 0.7rem;
+    /* width: 90%;
+    
+    margin: auto; */
+}
+
+
+.p1 h1{
+  /* width: 80%;
+    margin: auto; */
+    margin-bottom: 4rem;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.bentley{
+    width: 90%;
+    
+    margin: auto;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.btn5{
+    padding: 8px 15px;
+    background-color: #394D45;
+    border: none;
+    color: white;
+    border-radius: 3px ;
+    
+}
+.btn5:hover{
+    background-color: #58756a;
+}
+#button5{
+    background: none;
+    border: 0.5px solid rgb(15, 73, 15);
+    color:#394D45 ;
+}
+
+.logo{
+    display: flex;
+    margin: auto;
+
+    gap: 3rem;
+    justify-content:center;
+    align-items: center;
+    margin-top: 4rem;
+    /* margin-right: 0.rem; */
+}
+.logo .ben img{
+    height: 8vh;
+}
+
+.logo a{
+    color: black;
+    font-size: 0.6rem;
+  
+}
+.logo a:hover{
+    text-decoration: underline;
+}
+
+
+
+.logopart1{
+    display: flex;
+    margin: auto;
+    width: 90%;
+    gap: 2rem;
+    justify-content:center;
+    align-items: center;
+    margin-top: 2rem;
+    /* margin-right: 0.rem; */
+}
+
+
+.logopart1 a{
+    color: black;
+    font-size: 0.6rem;
+  
+}
+.logopart1 a img:hover{
+    text-decoration: underline;
+}
+
+.logopart1 a img{
+    height: 3vh;
+}
+
+
+.footer{
+    /* height: 100vh; */
+    margin-top: 4rem;
+
+}
+
+.blo{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.blo a{
+    color: black;
+    
+    font-size: 0.7rem;
+}
+
+.blo a:hover{
+    text-decoration: underline;
+}
+
+/* ===============================
+   GLOBAL RESPONSIVE FIXES
+================================ */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+.page1,
+.page2,
+.page3,
+.page4 {
+    min-height: auto;
+}
+
+/* Remove fixed positioning that breaks layout */
+.contentPart2 {
+    position: relative;
+}
+
+/* ===============================
+   TABLET (max-width: 1024px)
+================================ */
+@media (max-width: 1024px) {
+
+    .navbar {
+        height: auto;
+        padding: 1rem;
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .icons img {
+        height: 6vh;
+    }
+
+    .page2 {
+        width: 90%;
+        height: auto;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .contentPart1,
+    .contentPart2,
+    .contentPart3 {
+        height: 50vh;
+    }
+
+    .container,
+    .container2 {
+        width: 60vw;
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    .bigimage,
+    .bigimage1 {
+        width: 95%;
+        height: 80vh;
+    }
+
+    .page4 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .page4 .about img {
+        width: 100%;
+    }
+}
+
+/* ===============================
+   MOBILE (max-width: 768px)
+================================ */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    /* Page 1 */
+    .image {
+        margin-top: 6rem;
+    }
+
+    .image video {
+        height: 50vh;
+    }
+
+    /* Buttons */
+    .btn {
+        flex-direction: column;
+    }
+
+    /* Content sections */
+    .content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contentPart1,
+    .contentPart2,
+    .contentPart3 {
+        height: 40vh;
+    }
+
+    /* Big image sections */
+    .bigimage,
+    .bigimage1 {
+        height: 70vh;
+    }
+
+    .container,
+    .container2 {
+        width: 85%;
+        height: auto;
+        margin: auto;
+    }
+
+    .para,
+    .para1 {
+        text-align: center;
+    }
+
+    /* Page 4 */
+    .page4 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Logos */
+    .logo,
+    .logopart1 {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .logo .ben img {
+        height: 6vh;
+    }
+
+    /* Footer */
+    .blo {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+/* ===============================
+   SMALL MOBILE (max-width: 480px)
+================================ */
+@media (max-width: 480px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        font-size: 0.65rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .contentPart1,
+    .contentPart2,
+    .contentPart3 {
+        height: 30vh;
+    }
+
+    .bigimage,
+    .bigimage1 {
+        height: 60vh;
+    }
+
+    .btn button,
+    .btn4,
+    .btn5,
+    .buttonid {
+        width: 100%;
+        text-align: center;
+    }
+}

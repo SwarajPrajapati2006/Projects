@@ -1,0 +1,403 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(250, 253, 254);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+a {
+    color: rgba(22, 208, 22, 0.786);
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.navbar {
+    height: 9vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    animation: slideDown 0.7s ease-out forwards;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar div {
+    margin-right: 3rem;
+}
+
+.content .img img {
+    border-radius: 50%;
+    border: 6px solid #ECF0F1;
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    margin-top: 2rem;
+}
+
+.page1 {
+    max-width: 93%;
+    margin: auto;
+    background-color: white;
+    margin-top: 2rem;
+}
+
+.content {
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 6rem;
+    flex-wrap: wrap;
+}
+.navbar div a:hover{
+    color: rgb(12, 94, 12);
+    transition-duration: 0.3s;
+}
+.content p {
+    color: grey;
+}
+
+h2{
+    margin-top: 7rem;
+}
+
+.img1 img {
+    height: auto;
+    max-width: 100%;
+    background-repeat: no-repeat;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icons div img {
+    border-radius: 50%;
+    height: 5vh;
+    max-height: 40px;
+}
+
+.box1 {
+    display: flex;
+    border-radius: 2px;
+    /* border: 2px solid rgb(71, 71, 71); */
+    height: auto;
+    min-height: 49vh;
+    width: 100%;
+    max-width: 65vh;
+    gap: 1.7rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.page2 {
+    display: flex;
+    gap: 4.1rem;
+    
+}
+
+.contact {
+    display: flex;
+    gap: 1.4rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.all {
+    max-width: 93%;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.content2 {
+    gap: 4rem;
+    margin-top: 2rem;
+    display: flex;
+    
+    justify-content: center;
+}
+
+.box2 {
+    height: auto;
+    min-height: 75vh;
+    width: 100%;
+    max-width: 28vw;
+    border: 1px solid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: grey;
+    margin-top: 1.1rem;
+}
+
+.box2 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.see {
+    margin-top: 3rem;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+#access {
+    color: rgb(29, 20, 20);
+    padding: 10px 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.4s;
+}
+
+#access:hover {
+    background-color: black;
+    color: white;
+}
+
+.part {
+    max-width: 93%;
+    margin: auto;
+    margin-top: 2rem;
+    height: auto;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    width: 20px;
+    height: 20px;
+    background: red;
+    position: relative;
+    transform: rotate(45deg);
+    animation: pump 0.6s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: red;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    left: -10px;
+    top: 0;
+}
+
+@keyframes pump {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(1.25);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and smaller desktops */
+@media (max-width: 1024px) {
+    .navbar div {
+        margin-right: 1.5rem;
+    }
+    
+    .content {
+        margin-top: 4rem;
+    }
+    
+    .box2 {
+        max-width: 45vw;
+    }
+    
+    .content2 {
+        gap: 2rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    
+    .navbar div {
+        margin-right: 0;
+    }
+    
+    a {
+        font-size: 1rem;
+    }
+    
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .box1 {
+        max-width: 90vw;
+        justify-content: center;
+    }
+    
+    .box2 {
+        max-width: 90vw;
+    }
+    
+    .content2 {
+        gap: 1.5rem;
+    }
+    
+    .page2 {
+        justify-content: center;
+    }
+    
+    .contact {
+        justify-content: center;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .navbar {
+        height: auto;
+        min-height: 8vh;
+        padding: 0.5rem 0;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    a {
+        font-size: 0.9rem;
+    }
+    
+    .content {
+        margin-top: 2rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    .box1 {
+        max-width: 95vw;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+    
+    .box2 {
+        max-width: 95vw;
+        padding: 0.5rem;
+    }
+    
+    .content2 {
+        gap: 1rem;
+        margin-top: 1rem;
+        flex-direction: column;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    p {
+        font-size: 0.8rem;
+    }
+    
+    .icons div img {
+        height: 4vh;
+    }
+    
+    .see {
+        margin-top: 1.5rem;
+    }
+    
+    .btn {
+        height: 8vh;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+    .navbar {
+        gap: 0.7rem;
+    }
+    
+    a {
+        font-size: 0.8rem;
+    }
+    
+    .content .img img {
+        max-width: 150px;
+    }
+    
+    .box1, .box2 {
+        max-width: 98vw;
+    }
+}
+
+@media (max-width: 673px){
+   .page2{
+     flex-direction: column;
+     flex-wrap: wrap;
+   }
+
+   .content2{
+    flex-direction: column;
+     flex-wrap: wrap;
+   }
+}

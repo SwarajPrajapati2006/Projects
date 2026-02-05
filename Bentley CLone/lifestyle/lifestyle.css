@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #222;
+}
+
+.header {
+    background: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.nav .active {
+    border-bottom: 2px solid white;
+}
+
+.hero {
+    margin-top: 90px;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #f5f5f5;
+}
+
+.hero h1 {
+    font-size: 2.6rem;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 1rem auto;
+    color: #444;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 3rem 2rem;
+}
+
+.card {
+    background: #fafafa;
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #e5e5e5;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.6rem;
+    background: black;
+    color: white;
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: #555;
+}
+
+/* ANIMATIONS */
+
+@keyframes navSlide {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-nav {
+    animation: navSlide 1s ease forwards;
+}
+
+.animate-hero {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.animate-card {
+    animation: fadeUp 1s ease forwards;
+}
+
+
+
+@media (max-width: 1024px) {
+    .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .cards { grid-template-columns: 1fr; }
+    .header { flex-direction: column; }
+    .nav a { margin: 0.5rem; }
+}
